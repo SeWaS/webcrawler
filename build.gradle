@@ -1,0 +1,27 @@
+group 'org.sewas'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Jsoup for parsing
+    compile "org.jsoup:jsoup:1.11.3"
+
+    // Junit Jupiter
+    testCompile 'org.junit.jupiter:junit-jupiter-api:5.1.0'
+    testCompile 'org.junit.jupiter:junit-jupiter-engine:5.1.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.6'
+}
